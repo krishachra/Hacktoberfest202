@@ -1,0 +1,19 @@
+def is_palindrome(s):
+    """
+    Returns True if the string is a palindrome, False otherwise.
+    """
+    s = s.lower().replace(" ", "")  # Normalize input
+    return s == s[::-1]
+
+# User input
+text = input("Enter a string: ")
+if is_palindrome(text):
+    print("It's a palindrome!")
+else:
+    print("Not a palindrome.")
+
+# Test cases
+assert is_palindrome("madam") == True
+assert is_palindrome("racecar") == True
+assert is_palindrome("hello") == False
+assert is_palindrome("A man a plan a canal Panama") == True
